@@ -28,7 +28,6 @@ class Image:
             self._init_image_from_file(initializer, averageimages)
         elif type(initializer) is np.ndarray:
             self._init_image_from_data(initializer)
-            self.new_data = initializer
         elif type(initializer) is Image:
             self._init_image_from_image(initializer)
 
@@ -145,7 +144,6 @@ class Image:
         # newdata = shift(self.data, y, x)
         newdata = shift(self.data, y, x, missing)
         newimage = Image(newdata)
-
         return newimage
 
     def rebin(self, binning: int) -> Image:

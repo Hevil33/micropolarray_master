@@ -21,7 +21,7 @@ def linear_roi_from_polar(
 
     Args:
         data (np.ndarray): input array from which to select a roi
-        center (list): center coordinates
+        center (list): y, x center coordinates
         theta (float): angle of the linear roi
         r (list, optional): Maximum radius for the roi. Defaults to
         None.

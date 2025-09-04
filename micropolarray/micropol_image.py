@@ -178,14 +178,16 @@ class MicropolImage(Image):
             fix_data=False,
         )
 
-    @property
-    def polparam_list(self) -> list:
-        return [self.I, self.Q, self.U, self.pB, self.AoLP, self.DoLP]
+    # @property
+    # def polparam_list(self) -> list:
+    #    return [self.I, self.Q, self.U, self.pB, self.AoLP, self.DoLP]
 
     @property
     def single_pol_subimages(self):
         return split_polarizations(self.data)
 
+    # removed to reduce memory usage
+    """ 
     @property
     def pol0(self) -> PolParam:
         return PolParam(
@@ -225,6 +227,24 @@ class MicropolImage(Image):
             "DN",
             fix_data=False,
         )
+    """
+
+    def _get_single_pols_as_polparam_list(self):
+        """Returns the single polarization subimages as a list of PolParam objects, used internally for plots and saving.
+
+        Returns:
+            list: list of ordered single polarizations as PolParam list
+        """
+        return [
+            PolParam(
+                f"{int(angle):2d}",
+                self.single_pol_subimages[self.angle_dic[angle]],
+                f"{int(angle):2d} deg orientation pixels",
+                "DN",
+                fix_data=False,
+            )
+            for angle in [0, 45, 90, -45]
+        ]
 
     # ----------------------------------------------------------------
     # ---------------------- STOKES COMPONENTS -----------------------
@@ -489,7 +509,8 @@ class MicropolImage(Image):
             2, 3, figsize=figsize, constrained_layout=True, **kwargs
         )
         stokesax = stokesax.ravel()
-        for parameter, axis in zip(self.polparam_list, stokesax):
+        polparam_list = [self.I, self.Q, self.U, self.pB, self.AoLP, self.DoLP]
+        for parameter, axis in zip(polparam_list, stokesax):
             avg = np.mean(parameter.data)
             stdev = np.std(parameter.data)
             mappable_stokes = axis.imshow(
@@ -530,7 +551,8 @@ class MicropolImage(Image):
         data_ratio = self.data.shape[0] / self.data.shape[1]
         fig, ax = plt.subplots(2, 2, figsize=(12, 9), constrained_layout=True)
         ax = ax.ravel()
-        polslist = [self.pol0, self.pol45, self.pol90, self.pol_45]
+        # polslist = [self.pol0, self.pol45, self.pol90, self.pol_45]
+        polslist = self._get_single_pols_as_polparam_list()
         for pol, axis in zip(polslist, ax):
             mappable = axis.imshow(pol.data, cmap=cmap, **kwargs)
             axis.set_title(pol.title)
@@ -658,7 +680,8 @@ class MicropolImage(Image):
         Raises:
             ValueError: an invalid file name is provided
         """
-        polslist = [self.pol0, self.pol45, self.pol90, self.pol_45]
+        # polslist = [self.pol0, self.pol45, self.pol90, self.pol_45]
+        polslist = self._get_single_pols_as_polparam_list()
         filepath = Path(_make_abs_and_create_dir(filename))
         if filepath.suffix != ".fits":
             raise ValueError("filename must be a valid file name, not folder.")
@@ -745,7 +768,8 @@ class MicropolImage(Image):
             raise ValueError("filename must be a valid file name, not folder.")
         filepath = Path(_make_abs_and_create_dir(filename))
         group_filename = str(filepath.joinpath(filepath.parent, filepath.stem))
-        for param in self.polparam_list:
+        polparam_list = [self.I, self.Q, self.U, self.pB, self.AoLP, self.DoLP]
+        for param in polparam_list:
             hdr = self.header.copy()
             hdr["PARAM"] = (str(param.title), "Polarization parameter")
             hdr["UNITS"] = (str(param.measure_unit), "Measure units")

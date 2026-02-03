@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: micropolarray
-Version: 1.2.15
+Version: 1.2.16
 Summary: micropolarizer array data utilities
 Home-page: https://github.com/Hevil33/micropolarray_master
 Author: Hervé Haudemand
@@ -62,6 +62,9 @@ Requires-Dist: black; extra == "dev"
 Requires-Dist: bumpver; extra == "dev"
 Requires-Dist: isort; extra == "dev"
 Requires-Dist: pip-tools; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: license-file
 
 # micropolarray
 

@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}micropolarray package}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Subpackages}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}micropolarray.processing package}{1}{subsection.1.1.1}%
@@ -19,9 +19,9 @@
 \contentsline {section}{\numberline {1.3}micropolarray.cameras module}{12}{section.1.3}%
 \contentsline {section}{\numberline {1.4}micropolarray.image module}{13}{section.1.4}%
 \contentsline {section}{\numberline {1.5}micropolarray.micropol\_image module}{15}{section.1.5}%
-\contentsline {section}{\numberline {1.6}micropolarray.polarization\_functions module}{21}{section.1.6}%
+\contentsline {section}{\numberline {1.6}micropolarray.polarization\_functions module}{20}{section.1.6}%
 \contentsline {section}{\numberline {1.7}micropolarray.utils module}{21}{section.1.7}%
 \contentsline {section}{\numberline {1.8}Module contents}{23}{section.1.8}%
 \contentsline {chapter}{\numberline {2}Indices and tables}{25}{chapter.2}%
-\contentsline {chapter}{Python Module Index}{27}{section*.133}%
-\contentsline {chapter}{Index}{29}{section*.134}%
+\contentsline {chapter}{Python Module Index}{27}{section*.128}%
+\contentsline {chapter}{Index}{29}{section*.129}%

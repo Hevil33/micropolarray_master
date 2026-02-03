@@ -12,7 +12,7 @@
   \item \spxentry{Antarticor}\spxextra{class in micropolarray.cameras}, \hyperpage{12}
   \item \spxentry{AoLP}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
 		\hyperpage{15}
-  \item \spxentry{AoLP()}\spxextra{in module micropolarray.polarization\_functions}, \hyperpage{21}
+  \item \spxentry{AoLP()}\spxextra{in module micropolarray.polarization\_functions}, \hyperpage{20}
   \item \spxentry{auto\_threshold()}\spxextra{in module micropolarray.processing.image\_cleaning}, 
 		\hyperpage{7}
   \item \spxentry{average\_rawfiles\_to\_fits()}\spxextra{in module micropolarray.processing.convert}, 
@@ -68,7 +68,7 @@
 		\hyperpage{7}
   \item \spxentry{DoLP}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
 		\hyperpage{15}
-  \item \spxentry{DoLP()}\spxextra{in module micropolarray.polarization\_functions}, \hyperpage{21}
+  \item \spxentry{DoLP()}\spxextra{in module micropolarray.polarization\_functions}, \hyperpage{20}
 
   \indexspace
   \bigletter E
@@ -103,7 +103,7 @@
   \item \spxentry{get\_hot\_pixels()}\spxextra{in module micropolarray.processing.image\_cleaning}, 
 		\hyperpage{7}
   \item \spxentry{get\_malus\_normalization()}\spxextra{in module micropolarray.utils}, 
-		\hyperpage{22}
+		\hyperpage{21}
 
   \indexspace
   \bigletter I
@@ -129,7 +129,7 @@
 		\hyperpage{9}
   \item \spxentry{mask\_occulter()}\spxextra{micropolarray.micropol\_image.MicropolImage method}, 
 		\hyperpage{16}
-  \item \spxentry{mean\_minus\_std()}\spxextra{in module micropolarray.utils}, \hyperpage{22}
+  \item \spxentry{mean\_minus\_std()}\spxextra{in module micropolarray.utils}, \hyperpage{21}
   \item \spxentry{mean\_plus\_std()}\spxextra{in module micropolarray.utils}, \hyperpage{22}
   \item \spxentry{measure\_unit}\spxextra{micropolarray.micropol\_image.PolParam attribute}, 
 		\hyperpage{20}
@@ -148,7 +148,7 @@
   \item \spxentry{micropolarray.micropol\_image}
     \subitem \spxentry{module}, \hyperpage{15}
   \item \spxentry{micropolarray.polarization\_functions}
-    \subitem \spxentry{module}, \hyperpage{21}
+    \subitem \spxentry{module}, \hyperpage{20}
   \item \spxentry{micropolarray.processing}
     \subitem \spxentry{module}, \hyperpage{12}
   \item \spxentry{micropolarray.processing.chen\_wan\_liang\_calibration}
@@ -191,7 +191,7 @@
     \subitem \spxentry{micropolarray.cameras}, \hyperpage{12}
     \subitem \spxentry{micropolarray.image}, \hyperpage{13}
     \subitem \spxentry{micropolarray.micropol\_image}, \hyperpage{15}
-    \subitem \spxentry{micropolarray.polarization\_functions}, \hyperpage{21}
+    \subitem \spxentry{micropolarray.polarization\_functions}, \hyperpage{20}
     \subitem \spxentry{micropolarray.processing}, \hyperpage{12}
     \subitem \spxentry{micropolarray.processing.chen\_wan\_liang\_calibration}, \hyperpage{1}
     \subitem \spxentry{micropolarray.processing.congrid}, \hyperpage{2}
@@ -209,9 +209,9 @@
   \indexspace
   \bigletter N
   \item \spxentry{normalize2pi()}\spxextra{in module micropolarray.polarization\_functions}, 
-		\hyperpage{21}
-  \item \spxentry{normalize2pi()}\spxextra{in module micropolarray.utils}, \hyperpage{23}
-  \item \spxentry{normalize2piarray()}\spxextra{in module micropolarray.utils}, \hyperpage{23}
+		\hyperpage{20}
+  \item \spxentry{normalize2pi()}\spxextra{in module micropolarray.utils}, \hyperpage{22}
+  \item \spxentry{normalize2piarray()}\spxextra{in module micropolarray.utils}, \hyperpage{22}
   \item \spxentry{nparr\_from\_binary()}\spxextra{in module micropolarray.processing.convert}, 
 		\hyperpage{3}
   \item \spxentry{nrgf()}\spxextra{in module micropolarray.processing.nrgf}, \hyperpage{9}
@@ -228,18 +228,8 @@
   \item \spxentry{pB()}\spxextra{in module micropolarray.polarization\_functions}, \hyperpage{21}
   \item \spxentry{phi}\spxextra{micropolarray.processing.demodulation.Demodulator property}, 
 		\hyperpage{4}
-  \item \spxentry{pol0}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
-		\hyperpage{17}
-  \item \spxentry{pol45}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
-		\hyperpage{17}
-  \item \spxentry{pol90}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
-		\hyperpage{17}
-  \item \spxentry{pol\_45}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
-		\hyperpage{17}
   \item \spxentry{PolarCam}\spxextra{class in micropolarray.cameras}, \hyperpage{13}
   \item \spxentry{PolParam}\spxextra{class in micropolarray.micropol\_image}, \hyperpage{20}
-  \item \spxentry{polparam\_list}\spxextra{micropolarray.micropol\_image.MicropolImage property}, 
-		\hyperpage{17}
   \item \spxentry{print\_trimming\_info()}\spxextra{in module micropolarray.processing.rebin}, 
 		\hyperpage{11}
 
